@@ -23,9 +23,14 @@ const checkPassword = (email) => {
     return connection.execute(SQL, [email])
 }
 
-const register = (firstName, lastName, username, email, password, dateOfBirth) => {
-    SQL = `INSERT INTO ${variables.table_user} SET first_name = ?, last_name = ?, username = ?, email = ?, password = ?, date_of_birth = ?`
-    return connection.execute(SQL, [firstName, lastName, username, email, password, dateOfBirth])
+const checkPhone = (phone) => {
+    SQL = `SELECT phone FROM ${variables.table_user} WHERE phone = ?`
+    return connection.execute(SQL, [phone])
+}
+
+const register = (name, email, role, phone, photo, password) => {
+    SQL = `INSERT INTO ${variables.table_user} SET name = ?, email = ?, role = ?, phone = ?, photo = ?, password = ?`
+    return connection.execute(SQL, [name, email, role, phone, photo, password])
 }
 
 const selectLastRegister = () => {
@@ -33,11 +38,18 @@ const selectLastRegister = () => {
     return connection.execute(SQL)
 }
 
+const selectNameByName = (name) => {
+    SQL = `SELECT name FROM ${variables.table_user} WHERE name = ?`
+    return connection.execute(SQL, [name])
+}
+
 module.exports = {
     login,
     checkEmail,
     checkUsername,
     checkPassword,
+    checkPhone,
     register,
-    selectLastRegister
+    selectLastRegister,
+    selectNameByName
 }

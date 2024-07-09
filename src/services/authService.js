@@ -16,12 +16,21 @@ const checkPassword = (email) => {
     return authModel.checkPassword(email)
 }
 
-const register = (firstName, lastName, username, email, password, dateOfBirth) => {
-    return authModel.register(firstName, lastName, username, email, password, dateOfBirth)
+const checkPhone = (phone) => {
+    return authModel.checkPhone(phone)
+}
+
+const register = (name, email, role, phone, photo, password) => {
+    return authModel.register(name, email, role, phone, photo, password)
 }
 
 const selectLastRegister = () => {
     return authModel.selectLastRegister()
+}
+
+const selectNameByName = (name) => {
+    console.log(99)
+    return authModel.selectNameByName(name)
 }
 
 module.exports = {
@@ -29,6 +38,8 @@ module.exports = {
     checkEmail,
     checkUsername,
     checkPassword,
+    checkPhone,
     register,
-    selectLastRegister
+    selectLastRegister,
+    selectNameByName
 }
