@@ -2,6 +2,10 @@
 /node_modules
 note.txt
 /public/photo/profile/converter/*
+!/public/photo/profile/converter/.gitkeep
 /public/photo/profile/original/*
+!/public/photo/profile/original/.gitkeep
 /public/photo/project/converter/*
+!/public/photo/project/converter/.gitkeep
 /public/photo/project/original/*
+!/public/photo/project/original/.gitkeep
