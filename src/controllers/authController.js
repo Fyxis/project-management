@@ -119,7 +119,7 @@ const registerAuth = async (req, res) => {
 
         const hashPassword = await hashingPassword(password)
         await authService.register(name, email, "Member", phone, photoName, hashPassword)
-		// sendMail(name, email)
+		sendMail(name, email)
 		
 		const [data] = await authService.selectLastRegister()
 		formatDate(data)

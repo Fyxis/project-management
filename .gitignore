@@ -1,7 +1,7 @@
 /.env
 /node_modules
 note.txt
-/public/photo/profile/converter/
-/public/photo/profile/original/
-/public/photo/project/converter/
-/public/photo/project/original/
+/public/photo/profile/converter/*
+/public/photo/profile/original/*
+/public/photo/project/converter/*
+/public/photo/project/original/*
