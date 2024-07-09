@@ -6,7 +6,7 @@
     "start": "nodemon src/index"
   },
   "repository": {
-    "url": "https://github.com/Fyxis/api"
+    "url": "https://github.com/Fyxis/project-management"
   },
   "author": "@Fyxis",
   "license": "MIT",
