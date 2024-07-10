@@ -13,14 +13,4 @@ const hashPassword = async (password) => {
     }
 };
 
-// Contoh penggunaan
-// const passwordToHash = 'password123';
-// hashPassword(passwordToHash)
-//     .then(hashedPassword => {
-//         console.log('Hashed password:', hashedPassword);
-//     })
-//     .catch(err => {
-//         console.error('Error:', err);
-//     });
-
 module.exports = hashPassword
