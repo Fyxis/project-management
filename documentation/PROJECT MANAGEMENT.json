@@ -1,0 +1,341 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "PROJECT MANAGEMENT",
+    "collectionId": "985eb551-7bae-412d-bd58-46498c51ef79",
+    "dateExported": "2024-07-11T10:55:33.648Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "53a00070-1940-4577-8de8-4123a73cf690",
+            "name": "AUTH",
+            "containerId": "",
+            "created": "2024-07-03T04:31:38.281Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "5874c432-5028-4b26-a0e0-67392c8e38c1",
+            "name": "MAIN",
+            "containerId": "",
+            "created": "2024-07-05T18:26:30.175Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "bbd474fd-949c-46b7-8495-b8f97ed0c962",
+            "name": "PROJECT",
+            "containerId": "5874c432-5028-4b26-a0e0-67392c8e38c1",
+            "created": "2024-07-06T06:14:33.036Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "a54c27fd-5223-4e87-80ac-8eb28255d62c",
+            "name": "TASK",
+            "containerId": "5874c432-5028-4b26-a0e0-67392c8e38c1",
+            "created": "2024-07-06T06:14:47.545Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "98f11056-e049-47aa-afd1-21ebe86007e8",
+            "colId": "985eb551-7bae-412d-bd58-46498c51ef79",
+            "containerId": "53a00070-1940-4577-8de8-4123a73cf690",
+            "name": "REGISTER",
+            "url": "{{BASE_URL}}/management/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-07-03T04:31:23.215Z",
+            "modified": "2024-07-08T16:12:59.129Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "Bearer {{API_KEY}}"
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "David Sutanto"
+                    },
+                    {
+                        "name": "email",
+                        "value": "sutanto@gmail.com"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "085374419052"
+                    },
+                    {
+                        "name": "password",
+                        "value": "Password541"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "e:\\POTO + VIDEO\\me\\1663383368135.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "df9533c5-9886-485b-b63d-fe1efe863262",
+            "colId": "985eb551-7bae-412d-bd58-46498c51ef79",
+            "containerId": "bbd474fd-949c-46b7-8495-b8f97ed0c962",
+            "name": "GET ALL PROJECT",
+            "url": "{{BASE_URL}}/management/project/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-05T21:51:01.483Z",
+            "modified": "2024-07-05T21:51:53.976Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "Bearer {{API_KEY}}"
+                },
+                {
+                    "name": "token",
+                    "value": "{{TOKEN}}"
+                }
+            ]
+        },
+        {
+            "_id": "6ef8f014-4f64-4202-beb0-18334680a7ef",
+            "colId": "985eb551-7bae-412d-bd58-46498c51ef79",
+            "containerId": "53a00070-1940-4577-8de8-4123a73cf690",
+            "name": "LOGIN",
+            "url": "{{BASE_URL}}/management/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-07-03T04:31:46.912Z",
+            "modified": "2024-07-05T18:25:16.184Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "Bearer {{API_KEY}}"
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email",
+                        "value": "bagus@gmail.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "Password541"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "14740cc2-e691-488f-ba15-8b57a0095334",
+            "colId": "985eb551-7bae-412d-bd58-46498c51ef79",
+            "containerId": "bbd474fd-949c-46b7-8495-b8f97ed0c962",
+            "name": "GET PROJECT BY ID PROJECT",
+            "url": "{{BASE_URL}}/management/project/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-05T22:04:55.504Z",
+            "modified": "2024-07-08T16:06:33.972Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "Bearer {{API_KEY}}"
+                },
+                {
+                    "name": "token",
+                    "value": "{{TOKEN}}"
+                }
+            ]
+        },
+        {
+            "_id": "772a3476-07b1-4e48-9f30-1f03316628d9",
+            "colId": "985eb551-7bae-412d-bd58-46498c51ef79",
+            "containerId": "bbd474fd-949c-46b7-8495-b8f97ed0c962",
+            "name": "GET ALL PROJECT BY ID USER",
+            "url": "{{BASE_URL}}/management/project/user/1",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2024-07-05T22:37:38.113Z",
+            "modified": "2024-07-05T22:38:19.978Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "Bearer {{API_KEY}}"
+                },
+                {
+                    "name": "token",
+                    "value": "{{TOKEN}}"
+                }
+            ]
+        },
+        {
+            "_id": "be2ccef8-14ef-4302-ba2d-305765219db1",
+            "colId": "985eb551-7bae-412d-bd58-46498c51ef79",
+            "containerId": "a54c27fd-5223-4e87-80ac-8eb28255d62c",
+            "name": "GET ALL TASK",
+            "url": "{{BASE_URL}}/management/task",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2024-07-06T17:28:20.389Z",
+            "modified": "2024-07-06T17:29:00.143Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "Bearer {{API_KEY}}"
+                },
+                {
+                    "name": "token",
+                    "value": "{{TOKEN}}"
+                }
+            ]
+        },
+        {
+            "_id": "0f7a3f25-ccaf-4b17-b68b-f227bd74460f",
+            "colId": "985eb551-7bae-412d-bd58-46498c51ef79",
+            "containerId": "bbd474fd-949c-46b7-8495-b8f97ed0c962",
+            "name": "CREATE PROJECT BY ID USER",
+            "url": "{{BASE_URL}}/management/project/1",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-05T18:26:47.005Z",
+            "modified": "2024-07-08T16:13:42.059Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "Bearer {{API_KEY}}"
+                },
+                {
+                    "name": "token",
+                    "value": "{{TOKEN}}"
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "project_name",
+                        "value": "Project A"
+                    },
+                    {
+                        "name": "description_project",
+                        "value": "Project A is project to build a MMORPG game for mobile. This project is solo developer to make this game"
+                    },
+                    {
+                        "name": "start_date",
+                        "value": "2024-08-10"
+                    },
+                    {
+                        "name": "end_date",
+                        "value": "2026-08-19"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "e:\\POTO + VIDEO\\7e6a6edd9edea50c1273a6eb81d05ae9.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "33108a60-b6ab-4d0e-831e-ddf67920379e",
+            "colId": "985eb551-7bae-412d-bd58-46498c51ef79",
+            "containerId": "a54c27fd-5223-4e87-80ac-8eb28255d62c",
+            "name": "GET TASK BY ID PROJECT",
+            "url": "{{BASE_URL}}/management/task/1",
+            "method": "GET",
+            "sortNum": 37500,
+            "created": "2024-07-06T10:04:42.642Z",
+            "modified": "2024-07-06T10:05:12.051Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "Bearer {{API_KEY}}"
+                },
+                {
+                    "name": "token",
+                    "value": "{{TOKEN}}"
+                }
+            ]
+        },
+        {
+            "_id": "950bd193-9a34-4195-92a2-cc2d685f1800",
+            "colId": "985eb551-7bae-412d-bd58-46498c51ef79",
+            "containerId": "a54c27fd-5223-4e87-80ac-8eb28255d62c",
+            "name": "GET TASK BY ID USER",
+            "url": "{{BASE_URL}}/management/task/user/1",
+            "method": "GET",
+            "sortNum": 43750,
+            "created": "2024-07-06T06:37:41.402Z",
+            "modified": "2024-07-06T09:38:42.345Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "Bearer {{API_KEY}}"
+                },
+                {
+                    "name": "token",
+                    "value": "{{TOKEN}}"
+                }
+            ]
+        },
+        {
+            "_id": "7c85118a-8d9a-4b3e-8933-09a97afb7341",
+            "colId": "985eb551-7bae-412d-bd58-46498c51ef79",
+            "containerId": "a54c27fd-5223-4e87-80ac-8eb28255d62c",
+            "name": "CREATE TASK BY ID USER",
+            "url": "{{BASE_URL}}/management/task/1",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-07-06T06:15:00.964Z",
+            "modified": "2024-07-08T16:41:01.549Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "Bearer {{API_KEY}}"
+                },
+                {
+                    "name": "token",
+                    "value": "{{TOKEN}}"
+                }
+            ],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Fixing Bug"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Fix bug"
+                    },
+                    {
+                        "name": "project",
+                        "value": "1"
+                    },
+                    {
+                        "name": "start_date",
+                        "value": "2024-07-10"
+                    },
+                    {
+                        "name": "end_date",
+                        "value": "2024-07-09"
+                    }
+                ]
+            }
+        }
+    ],
+    "settings": {
+        "envId": "b1e77c84-f744-4a19-85f8-86e8615b4824"
+    },
+    "ref": "wcamy8ChPHHSPJsVvNyfK8dIAmVTp-Lqz1j9paZ7AZsgvnQ2524iMeixw-fjzbkTtAls5Y9Wl0IR2Ogo9tkseg"
+}

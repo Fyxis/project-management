@@ -22,8 +22,8 @@ app.use(cors({
 }))
 app.use('/management/public', express.static('public'))
 
-app.use("/management", Authorization, authRoute)
-app.use("/management", Authorization, verifyToken, projectRoute)
-app.use("/management", Authorization, verifyToken, taskRoute)
+app.use("/management", Authorization, authRoute) // Auth Route
+app.use("/management", Authorization, verifyToken, projectRoute) // Project Route
+app.use("/management", Authorization, verifyToken, taskRoute) // Task Route
 
 app.listen(PORT, console.info("SERVER RUNNING AT", BASE_URL))
